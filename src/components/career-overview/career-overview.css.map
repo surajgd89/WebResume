@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEQ,QAFA,CACJ,gBAAgB,CACZ,YAAY,CAAC;EACT,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "career-overview.scss"
+    ],
+    "names": [],
+    "file": "career-overview.css"
+}

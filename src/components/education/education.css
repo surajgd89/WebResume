@@ -1,0 +1,60 @@
+.education .list {
+  margin-bottom: 70px;
+}
+
+.education .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  max-width: 80%;
+}
+
+.education .list .item:first-child {
+  padding-top: 0;
+}
+
+.education .list .item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.education .list .item .col-one {
+  margin-right: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
+  min-width: 150px;
+  position: relative;
+}
+
+.education .list .item .col-one h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 2.2;
+}
+
+.education .list .item .col-one div {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--primary-half);
+}
+
+.education .list .item .col-two {
+  padding-left: 20px;
+}
+
+.education .list .item .col-two h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.education .list .item .col-two div {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--primary-half);
+}
+/*# sourceMappingURL=education.css.map */

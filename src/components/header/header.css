@@ -1,0 +1,84 @@
+.header {
+  background: var(--primary-light);
+  min-height: 100px;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header section {
+  margin-bottom: 0;
+}
+
+.header .toggle {
+  font-size: 29px;
+  cursor: pointer;
+}
+
+.header .toggle i {
+  line-height: 0;
+  margin: auto;
+}
+
+.header .profile-picture {
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+.header .profile-picture .picture {
+  width: 50px;
+  height: 50px;
+}
+
+.header .intro {
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+.header .intro .name {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.header .intro .designation {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+}
+
+.header .intro .experience {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.header .action {
+  margin-left: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .action a {
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: var(--primary);
+  margin-left: 50px;
+}
+
+.header .action a i {
+  font-size: 22px;
+  margin: auto;
+  line-height: 0;
+}
+/*# sourceMappingURL=header.css.map */

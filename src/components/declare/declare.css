@@ -1,0 +1,13 @@
+.content .declare .description {
+  line-height: 1.8;
+}
+
+.content .declare .name {
+  font-size: 40px;
+  font-weight: var(--fw-medium);
+  text-align: right;
+  margin-top: 80px;
+  font-family: var(--font-signature);
+  padding-right: 40px;
+}
+/*# sourceMappingURL=declare.css.map */

@@ -1,0 +1,37 @@
+.sidebar {
+    .about-me {
+        .list {
+            margin-bottom: 70px;
+            .item {
+                margin-bottom: 10px;
+
+                &::marker {
+                    color: var(--white-half);
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    .about-me {
+        .list {
+            margin-bottom: 70px;
+            .item {
+                margin-bottom: 10px;
+
+                &::marker {
+                    color: var(--primary-half);
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

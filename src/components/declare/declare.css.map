@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEQ,QAFA,CACJ,QAAQ,CACJ,YAAY,CAAC;EACT,WAAW,EAAE,GAAG;CACnB;;AAJT,AAKQ,QALA,CACJ,QAAQ,CAIJ,KAAK,CAAC;EACF,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,gBAAgB;EAC7B,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,qBAAqB;EAClC,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "declare.scss"
+    ],
+    "names": [],
+    "file": "declare.css"
+}

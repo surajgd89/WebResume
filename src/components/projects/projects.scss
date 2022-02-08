@@ -1,0 +1,18 @@
+.content {
+    .projects {
+        .list {
+            margin-bottom: 70px;
+            .item {
+                margin-bottom: 10px;
+
+                &::marker {
+                    color: var(--primary-half);
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

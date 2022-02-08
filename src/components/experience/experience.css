@@ -1,0 +1,80 @@
+.sidebar .experience .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  max-width: 80%;
+}
+
+.sidebar .experience .list .item:first-child {
+  padding-top: 0;
+}
+
+.sidebar .experience .list .item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.content .experience .list {
+  margin-bottom: 70px;
+}
+
+.content .experience .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  max-width: 80%;
+}
+
+.content .experience .list .item:first-child {
+  padding-top: 0;
+}
+
+.content .experience .list .item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.content .experience .list .item .col-one {
+  margin-right: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
+  min-width: 150px;
+  position: relative;
+}
+
+.content .experience .list .item .col-one h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 2.2;
+}
+
+.content .experience .list .item .col-one div {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--primary-half);
+}
+
+.content .experience .list .item .col-two {
+  padding-left: 20px;
+}
+
+.content .experience .list .item .col-two h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.content .experience .list .item .col-two div {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--primary-half);
+}
+/*# sourceMappingURL=experience.css.map */

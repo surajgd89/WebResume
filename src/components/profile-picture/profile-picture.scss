@@ -1,0 +1,15 @@
+.profile-picture {
+    display: flex;
+    margin-top: 40px;
+    .picture {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.header {
+    background: var(--primary-light);
+    min-height: 100px;
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    section {
+        margin-bottom: 0;
+    }
+
+    .toggle {
+        font-size: 29px;
+        cursor: pointer;
+
+        i {
+            line-height: 0;
+            margin: auto;
+        }
+    }
+    .profile-picture {
+        margin-left: 20px;
+        margin-top: 0;
+        .picture {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .intro {
+        margin-left: 20px;
+        margin-top: 0;
+        .name {
+            font-size: 22px;
+            line-height: 1.2;
+        }
+        .designation {
+            font-size: 14px;
+            font-weight: var(--fw-medium);
+            line-height: 1.4;
+        }
+        .experience {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+    }
+
+    .action {
+        margin-left: auto;
+        display: inline-flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            display: inline-flex;
+            color: var(--primary);
+            margin-left: 50px;
+
+            i {
+                font-size: 22px;
+                margin: auto;
+                line-height: 0;
+            }
+        }
+    }
+}
