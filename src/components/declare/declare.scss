@@ -1,8 +1,5 @@
 .content {
     .declare {
-        .description {
-            line-height: 1.8;
-        }
         .name {
             font-size: 40px;
             font-weight: var(--fw-medium);
@@ -10,6 +7,12 @@
             margin-top: 80px;
             font-family: var(--font-signature);
             padding-right: 40px;
+
+            @media (max-width: 575.98px) {
+                padding-right: 0;
+                text-align: left;
+                margin-top: 50px;
+            }
         }
     }
 }

@@ -32,9 +32,14 @@
             .data-item {
                 flex: 1 0 100%;
                 max-width: 50%;
-                min-width: 350px;
                 padding: 0 15px;
                 margin-bottom: 20px;
+
+                @media (max-width: 767.98px) {
+                    max-width: 100%;
+                }
+
+               
 
                 &:last-child {
                     margin-bottom: 0;
@@ -42,6 +47,8 @@
 
                 h5 {
                     color: var(--primary-half);
+                    font-weight: var(--fw-medium);
+                    font-size: 14px;
                 }
 
                 div {

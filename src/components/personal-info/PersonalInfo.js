@@ -36,7 +36,7 @@ function PersonalInfo() {
                     <h5>Hobbies</h5>
                     <div>Cooking, Listen Music</div>
                 </div>
-                <div className='data-item'>
+                <div className='data-item full-item'>
                     <h5>Address</h5>
                     <div>Meghmalhar, Building No. L10, Flat No.
                         302, 3rd Floor, Plot No. 2, Sector 10,

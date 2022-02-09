@@ -2,6 +2,11 @@ import './navigation.css';
 function Navigation(props) {
     return (
         <nav className="navigation">
+            <div className="action">
+                <button className="close">
+                    <i className="fal fa-times"></i>
+                </button>
+            </div>
             <ul>
                 <li>
                     <a href="">Career Overview</a>

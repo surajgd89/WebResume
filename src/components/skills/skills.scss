@@ -2,7 +2,6 @@
     .skills {
         .description {
             margin-bottom: 25px;
-            line-height: 1.8;
         }
 
         .list {
@@ -12,6 +11,10 @@
                 padding-top: 1px;
                 padding-left: 1px;
                 margin-bottom: 30px;
+
+                @media (max-width: 575.98px) {
+                    margin-bottom: 15px;
+                }
 
                 &:last-child {
                     margin-bottom: 0;
@@ -25,7 +28,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-start;
                     padding: 15px;
 
                     img {
@@ -36,9 +39,11 @@
 
                     span {
                         display: inline-flex;
-                        margin-top: 5px;
+                        margin-top: 8px;
                         font-size: 14px;
+                        line-height: 1.4;
                         color: var(--primary-half);
+                        text-align: center;
                     }
                 }
             }

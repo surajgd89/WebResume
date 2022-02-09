@@ -1,16 +1,8 @@
-// Extra Small devices (less than 576px)
 @media (max-width: 575.98px) {
 }
-
-// Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 }
 
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
-}
-
-// Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
 }
 
@@ -38,6 +30,7 @@ a {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
 }
 
 .wrapper {
@@ -52,12 +45,30 @@ a {
     background: var(--primary);
     color: #fff;
 
+    @media (max-width: 1199.98px) {
+        position: absolute;
+        padding: 30px;
+        top: 0;
+        left: -100%;
+        flex: 0 0 280px;
+        min-width: 280px;
+        max-width: 280px;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: all 300ms;
+        z-index: 1;
+
+        &.open {
+            left: 0;
+            transform: translateX(0);
+        }
+    }
+
     section {
         margin-bottom: 60px;
         &:last-child {
             margin-bottom: 0;
         }
-
         .heading {
             text-transform: uppercase;
             font-weight: var(--fw-semibold);
@@ -73,8 +84,21 @@ a {
     background: #fff;
     color: var(--primary);
 
+    @media (max-width: 991.98px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 767.98px) {
+        padding: 30px;
+    }
+
     section {
         margin-bottom: 60px;
+
+        @media (max-width: 767.98px) {
+            margin-bottom: 40px;
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -88,6 +112,52 @@ a {
             padding: 0 20px;
             background: var(--secondary);
             color: var(--primary);
+
+            @media (max-width: 767.98px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .description {
+            line-height: 1.8;
         }
     }
+}
+
+//demo
+.header .action,
+.career-overview,
+.about-me,
+.experience,
+.skills,
+.key-responsiblities,
+.projects,
+.awards,
+.education,
+.personal-info,
+.references,
+.follow-me,
+.declare,
+.footer {
+    display: none !important;
+}
+
+.career-overview,
+.about-me,
+.experience,
+.skills,
+.key-responsiblities,
+.projects,
+.awards,
+.education,
+.personal-info,
+.references,
+.follow-me,
+.declare,
+.footer {
+    display: block !important;
+}
+
+.header .action {
+    display: inline-flex !important;
 }

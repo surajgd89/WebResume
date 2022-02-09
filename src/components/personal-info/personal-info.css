@@ -38,9 +38,18 @@
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
   max-width: 50%;
-  min-width: 350px;
   padding: 0 15px;
   margin-bottom: 20px;
+}
+
+.content .personal-info .data-list .data-item.full-item {
+  max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .content .personal-info .data-list .data-item {
+    max-width: 100%;
+  }
 }
 
 .content .personal-info .data-list .data-item:last-child {

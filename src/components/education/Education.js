@@ -1,5 +1,8 @@
 import './education.css';
-function Education() {
+function Education(props) {
+
+    const inMobile = props.period;
+
     return (
         <section className='education'>
             <h2 className='heading'>Education</h2>
@@ -11,7 +14,7 @@ function Education() {
                     </div>
                     <div className='col-two'>
                         <h3>Bachlor of Arts</h3>
-                        <div>Yashwantrao Chavan Maharashtra Open University</div>
+                        <div> Yashwantrao Chavan Maharashtra Open University</div>
                     </div>
                 </div>
 

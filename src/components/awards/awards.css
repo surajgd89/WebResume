@@ -30,9 +30,14 @@
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
   max-width: 50%;
-  min-width: 350px;
   padding: 0 15px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .content .awards .data-list .data-item {
+    max-width: 100%;
+  }
 }
 
 .content .awards .data-list .data-item:last-child {
@@ -41,6 +46,8 @@
 
 .content .awards .data-list .data-item h5 {
   color: var(--primary-half);
+  font-weight: var(--fw-medium);
+  font-size: 14px;
 }
 
 .content .awards .data-list .data-item div {

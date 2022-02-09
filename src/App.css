@@ -23,6 +23,7 @@ a:hover {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
 
 .wrapper {
@@ -40,6 +41,31 @@ a:hover {
   padding: 40px 60px;
   background: var(--primary);
   color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+  .sidebar {
+    position: absolute;
+    padding: 30px;
+    top: 0;
+    left: -100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 280px;
+            flex: 0 0 280px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    z-index: 1;
+  }
+  .sidebar.open {
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .sidebar section {
@@ -64,8 +90,26 @@ a:hover {
   color: var(--primary);
 }
 
+@media (max-width: 991.98px) {
+  .content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .content {
+    padding: 30px;
+  }
+}
+
 .content section {
   margin-bottom: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .content section {
+    margin-bottom: 40px;
+  }
 }
 
 .content section:last-child {
@@ -83,5 +127,54 @@ a:hover {
   padding: 0 20px;
   background: var(--secondary);
   color: var(--primary);
+}
+
+@media (max-width: 767.98px) {
+  .content section .heading {
+    margin-bottom: 20px;
+  }
+}
+
+.content section .description {
+  line-height: 1.8;
+}
+
+.header .action,
+.career-overview,
+.about-me,
+.experience,
+.skills,
+.key-responsiblities,
+.projects,
+.awards,
+.education,
+.personal-info,
+.references,
+.follow-me,
+.declare,
+.footer {
+  display: none !important;
+}
+
+.career-overview,
+.about-me,
+.experience,
+.skills,
+.key-responsiblities,
+.projects,
+.awards,
+.education,
+.personal-info,
+.references,
+.follow-me,
+.declare,
+.footer {
+  display: block !important;
+}
+
+.header .action {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
 }
 /*# sourceMappingURL=App.css.map */

@@ -56,17 +56,22 @@
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
   max-width: 50%;
-  min-width: 350px;
   padding: 0 15px;
-  margin-bottom: 40px;
 }
 
-.content .references .list .item:last-child {
-  margin-bottom: 0;
+@media (max-width: 767.98px) {
+  .content .references .list .item {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .content .references .list .item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .content .references .list .item .info {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .content .references .list .item .info .name {
@@ -76,7 +81,19 @@
 
 .content .references .list .item .info .designation {
   font-size: 14px;
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-medium);
+  color: var(--primary-half);
+}
+
+.content .references .list .item .info::after {
+  content: '';
+  height: 2px;
+  width: 50px;
+  background: var(--secondary);
+  position: absolute;
+  top: auto;
+  bottom: -10px;
+  left: 0;
 }
 
 .content .references .list .item .data-list .data-item {

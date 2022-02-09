@@ -1,6 +1,5 @@
 .content .skills .description {
   margin-bottom: 25px;
-  line-height: 1.8;
 }
 
 .content .skills .list .item {
@@ -12,6 +11,12 @@
   padding-top: 1px;
   padding-left: 1px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 575.98px) {
+  .content .skills .list .item {
+    margin-bottom: 15px;
+  }
 }
 
 .content .skills .list .item:last-child {
@@ -36,9 +41,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 15px;
 }
 
@@ -52,8 +57,10 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 5px;
+  margin-top: 8px;
   font-size: 14px;
+  line-height: 1.4;
   color: var(--primary-half);
+  text-align: center;
 }
 /*# sourceMappingURL=skills.css.map */

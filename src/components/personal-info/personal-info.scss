@@ -40,9 +40,16 @@
             .data-item {
                 flex: 1 0 100%;
                 max-width: 50%;
-                min-width: 350px;
                 padding: 0 15px;
                 margin-bottom: 20px;
+
+                &.full-item {
+                    max-width: 100%;
+                }
+
+                @media (max-width: 767.98px) {
+                    max-width: 100%;
+                }
 
                 &:last-child {
                     margin-bottom: 0;
