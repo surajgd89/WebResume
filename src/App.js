@@ -19,62 +19,97 @@ import Declare from './components/declare/Declare';
 import Footer from './components/footer/Footer';
 
 function App() {
+    const [width, setWidth] = useState(window.innerWidth);
+    const [breakpointXL, setBreakpointXL] = useState(false);
+    const [breakpointLG, setBreakpointLG] = useState(false);
+    const [breakpointMD, setBreakpointMD] = useState(false);
+    const [breakpointSM, setBreakpointSM] = useState(false);
 
-  const [isTabDevice, setisTabDevice] = useState(false);
-  const [isMobileDevice, setisMobileDevice] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        updateDimensions();
+    }, []);
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    (width <= 1200) ? setisTabDevice(true) : setisTabDevice(false);
-    (width <= 768) ? setisMobileDevice(true) : setisMobileDevice(false);
+    useEffect(() => {
+        window.addEventListener('resize', updateDimensions);
+    });
 
-  }, [width]);
-
-  useEffect(() => {
-    const updateWidth = () => {
-      setWidth(window.innerWidth);
-      (width <= 1200) ? setisTabDevice(true) : setisTabDevice(false);
-      (width <= 768) ? setisMobileDevice(true) : setisMobileDevice(false);
+    const updateDimensions = () => {
+        setWidth(window.innerWidth);
+        width < 1200 ? setBreakpointXL(true) : setBreakpointXL(false);
+        width < 992 ? setBreakpointLG(true) : setBreakpointLG(false);
+        width < 768 ? setBreakpointMD(true) : setBreakpointMD(false);
+        width < 576 ? setBreakpointSM(true) : setBreakpointSM(false);
     };
-    window.addEventListener("resize", updateWidth);
-  });
 
-  return (
-    <div className='main-container'>
-      <div className='container'>
-        <div className='sidebar'>
-          {isTabDevice ? <Navigation /> : null}
-          {isTabDevice ? null : <ProfilePicture />}
-          {isTabDevice ? null : <AboutMe />}
-          {isTabDevice ? null : <PersonalInfo />}
-          {isTabDevice ? null : <Awards />}
-          {isTabDevice ? null : <FollowMe />}
-          {isTabDevice ? null : <References />}
+    function Sidebar(props) {
+        const IsbreakpointXL = props.breakpoint;
+        if (IsbreakpointXL) {
+            return <Navigation />;
+        } else {
+            return (
+                <>
+                    <ProfilePicture />
+                    <AboutMe />
+                    <PersonalInfo />
+                    <Awards />
+                    <FollowMe />
+                    <References />
+                </>
+            );
+        }
+    }
+
+    function Content(props) {
+        const IsbreakpointXL = props.breakpoint;
+        if (IsbreakpointXL) {
+            return (
+                <>
+                    <CareerOverview />
+                    <Experience />
+                    <Education />
+                    <Skills />
+                    <KeyResponsiblities />
+                    <Projects />
+                </>
+            );
+        } else {
+            return (
+                <>
+                    <CareerOverview />
+                    <AboutMe />
+                    <Experience />
+                    <Skills />
+                    <KeyResponsiblities />
+                    <Projects />
+                    <Awards />
+                    <Education />
+                    <PersonalInfo />
+                    <References />
+                    <FollowMe />
+                </>
+            );
+        }
+    }
+
+    return (
+        <div className="main-container">
+            <div className="container">
+                <div className="sidebar">
+                    <Sidebar breakpoint={breakpointXL} />
+                </div>
+                <div className="wrapper">
+                    {breakpointXL ? <Header /> : null}
+                    <div className="content">
+                        {breakpointXL ? null : <Intro />}
+                        {breakpointSM ? <Intro /> : null}
+                        <Content breakpoint={breakpointXL} />
+                        <Declare />
+                    </div>
+                    <Footer />
+                </div>
+            </div>
         </div>
-        <div className='wrapper'>
-          {isTabDevice ? <Header showIntro={isMobileDevice} /> : null}
-          <div className='content'>
-            {isMobileDevice ? null : <Intro />}
-            <CareerOverview />
-            {isTabDevice ? <AboutMe /> : null}
-            <Experience />
-            {isTabDevice ? null : <Education />}
-            <Skills />
-            <KeyResponsiblities />
-            <Projects />
-            {isTabDevice ? <Awards /> : null}
-            {isTabDevice ? <Education period={isMobileDevice} /> : null}
-            {isTabDevice ? <PersonalInfo /> : null}
-            {isTabDevice ? <References /> : null}
-            {isTabDevice ? <FollowMe /> : null}
-            <Declare />
-          </div>
-          <Footer />
-        </div>
-      </div>
-    </div>
-  );
-};
+    );
+}
 
 export default App;

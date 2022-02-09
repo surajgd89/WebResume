@@ -1,7 +1,6 @@
 import './education.css';
 function Education(props) {
 
-    const inMobile = props.period;
 
     return (
         <section className='education'>
