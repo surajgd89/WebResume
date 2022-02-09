@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState, useEffect } from 'react';
 import ProfilePicture from './components/profile-picture/ProfilePicture';
 import AboutMe from './components/about-me/AboutMe';
 import PersonalInfo from './components/personal-info/PersonalInfo';
@@ -18,33 +19,51 @@ import Declare from './components/declare/Declare';
 import Footer from './components/footer/Footer';
 
 function App() {
+
+  const [isMobile, setIsMobile] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const updateWidth = () => {
+      setWidth(window.innerWidth);
+      (width < 768) ? setIsMobile(true) : setIsMobile(false)
+    };
+    window.addEventListener("resize", updateWidth);
+  });
+
   return (
     <div className='main-container'>
       <div className='container'>
         <div className='sidebar'>
-          <ProfilePicture />
-          <AboutMe />
-          <PersonalInfo />
-          <Awards />
-          <FollowMe />
-          <References />
-          <Navigation />
+          {
+            isMobile ?
+              <Navigation />
+              :
+              <>
+                <ProfilePicture />
+                <AboutMe />
+                <PersonalInfo />
+                <Awards />
+                <FollowMe />
+                <References />
+              </>
+          }
         </div>
         <div className='wrapper'>
-          <Header />
+          {isMobile ? <Header /> : null}
           <div className='content'>
             <Intro />
             <CareerOverview />
-            <AboutMe />
+            {isMobile ? <AboutMe /> : null}
             <Experience />
+            {isMobile ? null : <Education />}
             <Skills />
             <KeyResponsiblities />
             <Projects />
-            <Awards />
-            <Education />
-            <PersonalInfo />
-            <References />
-            <FollowMe />
+            {isMobile ? <Awards /> : null}
+            {isMobile ? <Education /> : null}
+            {isMobile ? <PersonalInfo /> : null}
+            {isMobile ? <References /> : null}
+            {isMobile ? <FollowMe /> : null}
             <Declare />
           </div>
           <Footer />
@@ -52,6 +71,6 @@ function App() {
       </div>
     </div>
   );
-};
+}
 
 export default App;

@@ -1,25 +1,35 @@
+// Extra Small devices (less than 576px)
+@media (max-width: 575.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
 //COMMON CLASSES
 a {
     text-decoration: none;
     transition: all 300ms;
+    outline: 0;
+    border: 0;
 
     &:hover {
         text-decoration: underline;
     }
 }
 
-section {
-    margin-bottom: 60px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 //PAGE CLASSES
 
 .main-container {
-    padding: 40px 20px;
+    padding: 0;
 }
 
 .container {
@@ -42,13 +52,20 @@ section {
     background: var(--primary);
     color: #fff;
 
-    .heading {
-        text-transform: uppercase;
-        font-weight: var(--fw-semibold);
-        font-size: 24px;
-        margin-bottom: 20px;
-        color: var(--secondary);
-    }    
+    section {
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .heading {
+            text-transform: uppercase;
+            font-weight: var(--fw-semibold);
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+    }
 }
 
 .content {
@@ -56,18 +73,21 @@ section {
     background: #fff;
     color: var(--primary);
 
-    .heading {
-        text-transform: uppercase;
-        font-weight: var(--fw-semibold);
-        font-size: 24px;
-        margin-bottom: 30px;
-        display: inline-flex;
-        padding: 0 20px;
-        background: var(--secondary);
-        color: var(--primary);
-    }
+    section {
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
 
-    a {
-        color: var(--primary);
+        .heading {
+            text-transform: uppercase;
+            font-weight: var(--fw-semibold);
+            font-size: 24px;
+            margin-bottom: 30px;
+            display: inline-flex;
+            padding: 0 20px;
+            background: var(--secondary);
+            color: var(--primary);
+        }
     }
 }
