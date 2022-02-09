@@ -1,40 +1,42 @@
-.references {
-    .list {
-        .item {
-            margin-bottom: 40px;
-            .info {
-                margin-bottom: 20px;
-                .name {
-                    font-size: 22px;
-                    font-weight: var(--fw-medium);
-                }
-                .designation {
-                    font-size: 14px;
-                    font-weight: var(--fw-light);
-                }
-            }
-
-            .data-list {
-                .data-item {
+.sidebar {
+    .references {
+        .list {
+            .item {
+                margin-bottom: 40px;
+                .info {
                     margin-bottom: 20px;
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-
-                    h5 {
-                        color: var(--white-half);
+                    .name {
+                        font-size: 22px;
                         font-weight: var(--fw-medium);
-                        font-size: 14px;
                     }
+                    .designation {
+                        font-size: 14px;
+                        font-weight: var(--fw-light);
+                    }
+                }
 
-                    div {
-                        color: #fff;
-                        a {
+                .data-list {
+                    .data-item {
+                        margin-bottom: 20px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        h5 {
+                            color: var(--white-half);
+                            font-weight: var(--fw-medium);
+                            font-size: 14px;
+                        }
+
+                        div {
                             color: #fff;
-                            &:hover,
-                            &:focus {
-                                color: var(--secondary);
+                            a {
+                                color: #fff;
+                                &:hover,
+                                &:focus {
+                                    color: var(--secondary);
+                                }
                             }
                         }
                     }
@@ -52,8 +54,9 @@
             margin: 0 -15px;
 
             .item {
-                flex: 1 0 50%;
-                max-width: 400px;
+                flex: 1 0 100%;
+                max-width: 50%;
+                min-width: 350px;
                 padding: 0 15px;
                 margin-bottom: 40px;
 

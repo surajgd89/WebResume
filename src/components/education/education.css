@@ -6,11 +6,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-bottom: 1px solid var(--border);
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 0;
-  max-width: 80%;
 }
 
 .education .list .item:first-child {
@@ -25,9 +26,9 @@
 .education .list .item .col-one {
   margin-right: 30px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 150px;
-          flex: 0 0 150px;
-  min-width: 150px;
+      -ms-flex: 0 0 180px;
+          flex: 0 0 180px;
+  min-width: 180px;
   position: relative;
 }
 
@@ -44,7 +45,10 @@
 }
 
 .education .list .item .col-two {
-  padding-left: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  max-width: 100%;
 }
 
 .education .list .item .col-two h3 {

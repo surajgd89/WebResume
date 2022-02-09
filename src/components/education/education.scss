@@ -3,11 +3,11 @@
         margin-bottom: 70px;
         .item {
             display: flex;
+            flex-wrap: wrap;
             border-bottom: 1px solid var(--border);
             padding-top: 20px;
             padding-bottom: 20px;
             margin-bottom: 0;
-            max-width: 80%;
 
             &:first-child {
                 padding-top: 0;
@@ -20,8 +20,8 @@
 
             .col-one {
                 margin-right: 30px;
-                flex: 0 0 150px;
-                min-width: 150px;
+                flex: 0 0 180px;
+                min-width: 180px;
                 position: relative;
 
                 h3 {
@@ -38,7 +38,8 @@
             }
 
             .col-two {
-                padding-left: 20px;
+                flex: 1 0 auto;
+                max-width: 100%;
                 h3 {
                     font-size: 22px;
                     margin-bottom: 5px;
