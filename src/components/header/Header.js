@@ -24,7 +24,7 @@ function Header(props) {
                 </a>
                 <a href={ResumeFile} download={true}>
                     <i className='fal fa-arrow-to-bottom'></i>
-                    <span>Download</span>
+                    <span>PDF</span>
                 </a>
             </div>
         </header >

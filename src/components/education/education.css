@@ -21,9 +21,9 @@
         flex-wrap: wrap;
     flex-wrap: wrap;
     padding-left: 20px;
-    border-left: 2px solid var(--secondary);
-    background: rgba(var(--secondary-light), 0.18);
-    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-half);
+    background: var(--primary-light);
+    margin-bottom: 10px;
     border-bottom: 0;
   }
 }
@@ -62,6 +62,15 @@
   .education .list .item .col-one {
     margin-right: 15px;
     max-width: 150px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .education .list .item .col-one {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
