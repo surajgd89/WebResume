@@ -1,17 +1,43 @@
-.content .declare .name {
+.declare {
+  padding: 30px 60px;
+  background: var(--primary-light);
+  text-align: left;
+}
+
+@media (max-width: 991.98px) {
+  .declare {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .declare {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .declare {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.declare .name {
   font-size: 40px;
   font-weight: var(--fw-medium);
   text-align: right;
-  margin-top: 80px;
+  margin-top: 60px;
   font-family: var(--font-signature);
   padding-right: 40px;
 }
 
 @media (max-width: 575.98px) {
-  .content .declare .name {
+  .declare .name {
     padding-right: 0;
-    text-align: left;
-    margin-top: 50px;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--primary-half);
   }
 }
 /*# sourceMappingURL=declare.css.map */

@@ -20,16 +20,23 @@ import Footer from './components/footer/Footer';
 
 function App() {
     const [width, setWidth] = useState(window.innerWidth);
+
     const [breakpointXL, setBreakpointXL] = useState(false);
     const [breakpointLG, setBreakpointLG] = useState(false);
     const [breakpointMD, setBreakpointMD] = useState(false);
     const [breakpointSM, setBreakpointSM] = useState(false);
+    const [isActive, setActive] = useState(false);
+    const [scroll, setScroll] = useState(false)
 
     useEffect(() => {
-        updateDimensions();
+
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 80)
+        });
     }, []);
 
     useEffect(() => {
+        updateDimensions();
         window.addEventListener('resize', updateDimensions);
     });
 
@@ -44,7 +51,7 @@ function App() {
     function Sidebar(props) {
         const IsbreakpointXL = props.breakpoint;
         if (IsbreakpointXL) {
-            return <Navigation />;
+            return <Navigation togglemenu={handleToggle} />;
         } else {
             return (
                 <>
@@ -64,18 +71,6 @@ function App() {
         if (IsbreakpointXL) {
             return (
                 <>
-                    <CareerOverview />
-                    <Experience />
-                    <Education />
-                    <Skills />
-                    <KeyResponsiblities />
-                    <Projects />
-                </>
-            );
-        } else {
-            return (
-                <>
-                    <CareerOverview />
                     <AboutMe />
                     <Experience />
                     <Skills />
@@ -88,23 +83,44 @@ function App() {
                     <FollowMe />
                 </>
             );
+        } else {
+            return (
+                <>
+                    <Experience />
+                    <Education />
+                    <Skills />
+                    <KeyResponsiblities />
+                    <Projects />
+                </>
+            );
         }
+    }
+
+    function handleToggle() {
+        setActive(!isActive);
     }
 
     return (
         <div className="main-container">
             <div className="container">
-                <div className="sidebar">
+                <div className={isActive ? 'sidebar open' : 'sidebar'} >
                     <Sidebar breakpoint={breakpointXL} />
                 </div>
                 <div className="wrapper">
-                    {breakpointXL ? <Header /> : null}
+                    {breakpointXL ? (
+                        <Header togglemenu={handleToggle} fixedHeader={scroll}
+                            breakpoint={{ XL: breakpointXL, SM: breakpointSM }}
+                        />
+                    ) : null}
+
                     <div className="content">
                         {breakpointXL ? null : <Intro />}
                         {breakpointSM ? <Intro /> : null}
+                        <CareerOverview />
                         <Content breakpoint={breakpointXL} />
-                        <Declare />
+
                     </div>
+                    <Declare />
                     <Footer />
                 </div>
             </div>

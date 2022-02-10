@@ -1,11 +1,15 @@
 .intro {
-    margin-top: 20px;
     .name {
         text-transform: uppercase;
         font-size: 50px;
         font-weight: var(--fw-bold);
         margin: 0;
         color: var(--primary);
+
+        @media (max-width: 575.98px) {
+            font-size: 35px;
+            line-height: 1.2;
+        }
 
         span {
             font-weight: var(--fw-light);
@@ -15,9 +19,17 @@
         font-size: 24px;
         font-weight: var(--fw-light);
         color: var(--primary-half);
+
+        @media (max-width: 575.98px) {
+            font-size: 20px;
+        }
     }
     .experience {
         font-size: 16px;
         font-weight: var(--fw-medium);
+
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+        }
     }
 }

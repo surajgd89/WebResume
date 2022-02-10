@@ -79,6 +79,12 @@
   font-weight: var(--fw-medium);
 }
 
+@media (max-width: 575.98px) {
+  .content .references .list .item .info .name {
+    font-size: 20px;
+  }
+}
+
 .content .references .list .item .info .designation {
   font-size: 14px;
   font-weight: var(--fw-medium);
@@ -115,10 +121,10 @@
 }
 
 .content .references .list .item .data-list .data-item div a {
-  color: var(--primary);
+  color: var(--link);
 }
 
 .content .references .list .item .data-list .data-item div a:hover, .content .references .list .item .data-list .data-item div a:focus {
-  color: var(--secondary);
+  color: var(--link);
 }
 /*# sourceMappingURL=references.css.map */

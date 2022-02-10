@@ -45,7 +45,7 @@ a:hover {
 
 @media (max-width: 1199.98px) {
   .sidebar {
-    position: absolute;
+    position: fixed;
     padding: 30px;
     top: 0;
     left: -100%;
@@ -57,9 +57,10 @@ a:hover {
     height: 100%;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-    -webkit-transition: all 300ms;
-    transition: all 300ms;
-    z-index: 1;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    z-index: 2;
+    overflow-x: auto;
   }
   .sidebar.open {
     left: 0;
@@ -102,6 +103,12 @@ a:hover {
   }
 }
 
+@media (max-width: 575.98px) {
+  .content {
+    padding: 20px;
+  }
+}
+
 .content section {
   margin-bottom: 60px;
 }
@@ -109,6 +116,12 @@ a:hover {
 @media (max-width: 767.98px) {
   .content section {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content section {
+    margin-bottom: 30px;
   }
 }
 
@@ -127,6 +140,30 @@ a:hover {
   padding: 0 20px;
   background: var(--secondary);
   color: var(--primary);
+  position: relative;
+  border-radius: 2px;
+}
+
+.content section .heading::before, .content section .heading::after {
+  content: '';
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.content section .heading::before {
+  left: -5px;
+  right: auto;
+}
+
+.content section .heading::after {
+  left: auto;
+  right: -5px;
 }
 
 @media (max-width: 767.98px) {
@@ -135,46 +172,13 @@ a:hover {
   }
 }
 
+@media (max-width: 575.98px) {
+  .content section .heading {
+    font-size: 20px;
+  }
+}
+
 .content section .description {
   line-height: 1.8;
-}
-
-.header .action,
-.career-overview,
-.about-me,
-.experience,
-.skills,
-.key-responsiblities,
-.projects,
-.awards,
-.education,
-.personal-info,
-.references,
-.follow-me,
-.declare,
-.footer {
-  display: none !important;
-}
-
-.career-overview,
-.about-me,
-.experience,
-.skills,
-.key-responsiblities,
-.projects,
-.awards,
-.education,
-.personal-info,
-.references,
-.follow-me,
-.declare,
-.footer {
-  display: block !important;
-}
-
-.header .action {
-  display: -webkit-inline-box !important;
-  display: -ms-inline-flexbox !important;
-  display: inline-flex !important;
 }
 /*# sourceMappingURL=App.css.map */

@@ -26,6 +26,7 @@ function Skills() {
                 Illustrator,Adobe XD, VS Code, Ajax, Git
             </div>
             <div className="list">
+                <div className='head'>UI / UX Design</div>
                 <div className="item">
                     <div className="logo">
                         <img
@@ -56,6 +57,7 @@ function Skills() {
                         <span>CorelDRAW</span>
                     </div>
                 </div>
+                <div className='head'>Front End Development </div>
                 <div className="item">
                     <div className="logo">
                         <img src={HtmlLogo} alt="HTML5" title="HTML5" />
@@ -102,6 +104,7 @@ function Skills() {
                         <span>JSON</span>
                     </div>
                 </div>
+                <div className='head'>Other Key Tools </div>
                 <div className="item">
                     <div className="logo">
                         <img src={VSCodeLogo} alt="VS Code" title="VS Code" />

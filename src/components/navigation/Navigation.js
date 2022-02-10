@@ -1,9 +1,11 @@
 import './navigation.css';
+import React, { useState } from 'react';
 function Navigation(props) {
+    const handleToggle = props.togglemenu;
     return (
         <nav className="navigation">
             <div className="action">
-                <button className="close">
+                <button className="close" onClick={handleToggle}>
                     <i className="fal fa-times"></i>
                 </button>
             </div>

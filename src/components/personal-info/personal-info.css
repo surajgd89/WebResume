@@ -67,10 +67,10 @@
 }
 
 .content .personal-info .data-list .data-item div a {
-  color: var(--primary);
+  color: var(--link);
 }
 
 .content .personal-info .data-list .data-item div a:hover, .content .personal-info .data-list .data-item div a:focus {
-  color: var(--secondary);
+  color: var(--link);
 }
 /*# sourceMappingURL=personal-info.css.map */

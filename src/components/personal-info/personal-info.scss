@@ -65,10 +65,10 @@
                     color: var(--primary);
 
                     a {
-                        color: var(--primary);
+                        color: var(--link);
                         &:hover,
                         &:focus {
-                            color: var(--secondary);
+                            color: var(--link);
                         }
                     }
                 }

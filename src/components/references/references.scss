@@ -73,6 +73,10 @@
                     .name {
                         font-size: 22px;
                         font-weight: var(--fw-medium);
+
+                        @media (max-width: 575.98px) {
+                            font-size: 20px;
+                        }
                     }
                     .designation {
                         font-size: 14px;
@@ -110,10 +114,11 @@
                             color: var(--primary);
 
                             a {
-                                color: var(--primary);
+                                color: var(--link);
+
                                 &:hover,
                                 &:focus {
-                                    color: var(--secondary);
+                                    color: var(--link);
                                 }
                             }
                         }

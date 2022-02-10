@@ -2,16 +2,30 @@ import './header.css';
 import ResumeFile from '../../Resume.pdf';
 import ProfilePicture from '../../components/profile-picture/ProfilePicture';
 import Intro from '../../components/intro/Intro';
-function Header() {
+function Header(props) {
+    const IsbreakpointXL = props.breakpoint.XL;
+    const IsbreakpointSM = props.breakpoint.SM;
+    const handleToggle = props.togglemenu;
+    const fixedClassToggle = props.fixedHeader;
     return (
-        <header className='header'>
-            <div className='toggle'><i className='fal fa-bars'></i></div>
+        <header className={fixedClassToggle ? 'header fixed' : 'header'}>
+            <div className='toggle' onClick={handleToggle}><i className='fal fa-bars'></i></div>
             <ProfilePicture />
-            <Intro />
+            {IsbreakpointXL ? null : <Intro />}
+            {IsbreakpointSM ? null : <Intro />}
             <div className='action'>
-                <a href="mailto:suraj.gd89@gmail.com"><i className='fal fa-envelope'></i></a>
-                <a href="tel:919594415153"><i className='fal fa-phone-alt'></i></a>
-                <a href={ResumeFile} download={true}><i className='fal fa-arrow-to-bottom'></i></a>
+                <a href="mailto:suraj.gd89@gmail.com">
+                    <i className='fal fa-envelope'></i>
+                    <span>Email</span>
+                </a>
+                <a href="tel:919594415153">
+                    <i className='fal fa-phone-alt'></i>
+                    <span>Call</span>
+                </a>
+                <a href={ResumeFile} download={true}>
+                    <i className='fal fa-arrow-to-bottom'></i>
+                    <span>Download</span>
+                </a>
             </div>
         </header >
     );
